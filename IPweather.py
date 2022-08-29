@@ -49,7 +49,7 @@ location = get_location()
 ################################
 from tomorrow_io import Tomorrow
 
-apikey = 'A4xh9xli0h0y612bvtqsQIgnctKUh3X3'
+apikey = secrets.apikey
 tomorrow = Tomorrow(apikey, longitude=-location["longitude"], latitude=location["latitude"])
 tomorrow.get_current(data_fields=['weatherCode'])
 
