@@ -29,7 +29,7 @@ location = get_location()
 
 #openweathermap stuff
 city = location["city"]
-API_KEY = "ae81c5967df7adbdc65922f7f8e215e7"
+API_KEY = "${{ secrets.SECRET_TOKEN }}"
 base_url = "http://api.openweathermap.org/data/2.5/weather?&q="+city+"appid="+API_KEY
 weather_data = requests.get(base_url).json()
 pprint(weather_data)
