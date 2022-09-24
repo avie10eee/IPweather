@@ -3,7 +3,7 @@ from pprint import pprint
 import requests
 from requests import get
 import json
-
+import os
 response = ()
 #ipify
 def get_ip():
@@ -29,7 +29,7 @@ location = get_location()
 
 #openweathermap stuff
 city = location["city"]
-API_KEY = "${{ secrets.SECRET_TOKEN }}"
+API_KEY = os.environ["APIKY"]
 base_url = "http://api.openweathermap.org/data/2.5/weather?&q="+city+"appid="+API_KEY
 weather_data = requests.get(base_url).json()
 pprint(weather_data)
