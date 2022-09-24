@@ -1,14 +1,15 @@
 
-from tkinter import N
-from urllib import response
+from pprint import pprint
 import requests
 from requests import get
 import json
 
-
+response = ()
+#ipify
 def get_ip():
     response = requests.get('https://api64.ipify.org?format=json').json()
     return response["ip"]
+#ipapi
 def get_location():
     ip_address = get_ip()
     response = requests.get(f'https://ipapi.co/{ip_address}/json/').json()
@@ -23,17 +24,12 @@ def get_location():
     }
     return location_data
 location = get_location()
+'''print(location)'''
 
 
-
-################################
-from tomorrow_io import Tomorrow
-
-apikey = secrets.apikey
-tomorrow = Tomorrow(apikey, longitude=-location["longitude"], latitude=location["latitude"])
-tomorrow.get_current(data_fields=['weatherCode'])
-
-
-reponse = get("https://api.tomorrow.io/v4/")
-transl = json.loads(reponse.content.decode())
-print(transl["contents"]['translated'])
+#openweathermap stuff
+city = location["city"]
+API_KEY = "ae81c5967df7adbdc65922f7f8e215e7"
+base_url = "http://api.openweathermap.org/data/2.5/weather?&q="+city+"appid="+API_KEY
+weather_data = requests.get(base_url).json()
+pprint(weather_data)
