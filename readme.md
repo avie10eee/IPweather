@@ -1,5 +1,4 @@
 <h1>hello</h1>
-<hr />
 <p>python weather program with auto detecting location using Ipify, Ipapi and OpenWeatherMap</p>
 <hr />
 <h1> How it works</h1>
