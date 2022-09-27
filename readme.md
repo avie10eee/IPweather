@@ -1,4 +1,6 @@
 <h1>hello</h1>
+
+
 <p>python weather program with auto detecting location using Ipify, Ipapi and OpenWeatherMap</p>
 <hr />
 <h1> How it works</h1>
@@ -11,6 +13,7 @@
 <h2>3.OpenWeatherMaps</h2>
 <p> OpenWeatherMaps works by inputing the city from Ipapi and getting the weather forecast.</p>
 
+site:avie10eee.github.io/IPweather/
 
 
 
