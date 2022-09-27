@@ -12,7 +12,9 @@
 <hr />
 <h2>3.OpenWeatherMaps</h2>
 <p> OpenWeatherMaps works by inputing the city from Ipapi and getting the weather forecast.</p>
+<hr />
+site:
+avie10eee.github.io/IPweather/
 
-site:avie10eee.github.io/IPweather/
-
+licence:
 CC BY-NC-SA 4.0
