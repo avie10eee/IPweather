@@ -1,7 +1,4 @@
-<h1>hello</h1>
-
-
-<p>python weather program with auto detecting location using Ipify, Ipapi and OpenWeatherMap</p>
+<p>IPweather is a python weather program that can find the forecast near you using couple of python libraries</p>
 <hr />
 <h1> How it works</h1>
 <h2> 1. Ipify</h2>
