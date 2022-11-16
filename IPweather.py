@@ -2,8 +2,8 @@
 from pprint import pprint
 import requests
 from requests import get
-import json
 import os
+
 response = ()
 #ipify
 def get_ip():
@@ -24,12 +24,15 @@ def get_location():
     }
     return location_data
 location = get_location()
-'''print(location)'''
+#print(location)
 
 
 #openweathermap stuff
 city = location["city"]
-API_KEY = os.environ["APIKY"]
-base_url = "http://api.openweathermap.org/data/2.5/weather?&q="+city+"appid="+API_KEY
-weather_data = requests.get(base_url).json()
+API_KEY = os.getenv("API_KEY")
+#API_KEY = "80947e29d4714ff836e3ecc7d112f5e9"
+base_url = "http://api.openweathermap.org/data/2.5/weather?"
+final_url = "base_url" + "appid=" + API_KEY + "&q=" + city
+weather_data = requests.get(final_url).json()
+print("\nCurrent Weather Data Of " + city +":\n")
 pprint(weather_data)
